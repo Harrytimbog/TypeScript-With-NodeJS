@@ -8,6 +8,11 @@ const textResults: string[] = [];
 type NumberOrString = number | string;
 type Result = { val: number; timestamp: Date };
 
+interface ResultObj {
+  val: number;
+  timestamp: Date;
+}
+
 function add(num1: NumberOrString, num2: NumberOrString) {
   if (typeof num1 === "number" && typeof num2 === "number") {
     return num1 + num2;
@@ -17,7 +22,7 @@ function add(num1: NumberOrString, num2: NumberOrString) {
   return +num1 + +num2;
 }
 
-function printResult(resultObj: Result) {
+function printResult(resultObj: ResultObj) {
   console.log(resultObj.val);
 }
 
